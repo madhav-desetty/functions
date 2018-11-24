@@ -5,13 +5,13 @@ This is a simple python Google Cloud function that burns a tile grid or grid uni
 ```
 git clone https://github.com/madhav-desetty/functions.git
 cd functions/merctilegrid
-gcloud functions deploy merctilegrid --runtime python37 --trigger-http
-git clone https://github.com/madhav-desetty/functionsl.git
-gcloud functions describe merctilegrid
+gcloud functions deploy compute_grid --runtime python37 --trigger-http
+gcloud functions describe compute_grid
+pip install geojsonio
 ```
 It should look like this:
 ```
-https://GCP_REGION-PROJECT_ID.cloudfunctions.net/merctilegrid 
+https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid 
 ```
 
 
@@ -58,5 +58,5 @@ curl -X POST -H "Content-Type: application/json" -d
   "zoom": 10,
   "op": "union"
 }
-https://GCP_REGION-PROJECT_ID.cloudfunctions.net/merctilegrid | geojsonio
+https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid | geojsonio
 ```
