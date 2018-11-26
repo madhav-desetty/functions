@@ -17,8 +17,7 @@ https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid
 
 # Usage
 ```
-curl -X POST -H "Content-Type: application/json" -d @request.txt
-https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid | geojsonio
+curl -X POST -H "Content-Type: application/json" -d @request.txt https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid | geojsonio
 ```
 
 #### `req.txt`
