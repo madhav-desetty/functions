@@ -17,7 +17,12 @@ https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid
 
 # Usage
 ```
-curl -X POST -H "Content-Type: application/json" -d 
+curl -X POST -H "Content-Type: application/json" -d @request.txt
+https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid | geojsonio
+```
+
+#### `req.txt`
+```
 {
   "aoi": {
     "type": "FeatureCollection",
@@ -58,5 +63,4 @@ curl -X POST -H "Content-Type: application/json" -d
   "zoom": 10,
   "op": "union"
 }
-https://GCP_REGION-PROJECT_ID.cloudfunctions.net/compute_grid | geojsonio
 ```
